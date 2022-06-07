@@ -7,7 +7,6 @@ from .serializers import PetSerializer
 
 
 class PetList(APIView):
-
     def get(self, request, format=None):
         pets = Pet.objects.all()
         serializer = PetSerializer(pets, many=True)
